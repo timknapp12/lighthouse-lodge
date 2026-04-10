@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" fill="none">
+  <defs>
+    <!-- Bright light glow -->
+    <radialGradient id="lightGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="20%" stop-color="#FFF4D6" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#F5D77A" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#D4A44C" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D4A44C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Beam gradient -->
+    <linearGradient id="beamLeft" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF4D6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#D4A44C" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF4D6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#D4A44C" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Tower body gradient for depth -->
+    <linearGradient id="towerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E8E2DA"/>
+      <stop offset="35%" stop-color="#FFFFFF"/>
+      <stop offset="65%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DDD7CF"/>
+    </linearGradient>
+
+    <!-- Lantern glass glow -->
+    <linearGradient id="glassGlow" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#FFE8A0" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#F5D060" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Subtle shadow filter -->
+    <filter id="shadow" x="-10%" y="-5%" width="120%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- ===== LIGHT BEAMS ===== -->
+  <!-- Wide dramatic beams -->
+  <path d="M200 142 L-30 -20 L80 -20 Z" fill="url(#beamLeft)" opacity="0.7"/>
+  <path d="M200 142 L320 -20 L430 -20 Z" fill="url(#beamRight)" opacity="0.7"/>
+  <!-- Secondary beams -->
+  <path d="M200 142 L-80 60 L20 10 Z" fill="url(#beamLeft)" opacity="0.45"/>
+  <path d="M200 142 L380 10 L480 60 Z" fill="url(#beamRight)" opacity="0.45"/>
+  <!-- Soft side beams -->
+  <path d="M200 142 L-40 130 L40 80 Z" fill="url(#beamLeft)" opacity="0.2"/>
+  <path d="M200 142 L360 80 L440 130 Z" fill="url(#beamRight)" opacity="0.2"/>
+
+  <!-- ===== LIGHT GLOW ===== -->
+  <circle cx="200" cy="142" r="60" fill="url(#lightGlow)"/>
+  <circle cx="200" cy="142" r="35" fill="#FFF4D6" opacity="0.5"/>
+  <circle cx="200" cy="142" r="18" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="200" cy="142" r="8" fill="#FFFFFF"/>
+
+  <!-- ===== LIGHTHOUSE STRUCTURE ===== -->
+  <g filter="url(#shadow)">
+
+    <!-- Top finial -->
+    <circle cx="200" cy="96" r="5" fill="#1E2D3D"/>
+    <rect x="197" y="100" width="6" height="6" rx="1" fill="#1E2D3D"/>
+
+    <!-- Dome / cap -->
+    <path d="M183 112 L217 112 L222 106 Q200 96 178 106 Z" fill="#1E2D3D"/>
+
+    <!-- Ventilator -->
+    <rect x="190" y="106" width="20" height="6" rx="2" fill="#2C3E50"/>
+
+    <!-- Lantern room frame -->
+    <rect x="175" y="112" width="50" height="34" rx="2" fill="#1E2D3D"/>
+
+    <!-- Lantern glass panes (bright) -->
+    <rect x="179" y="115" width="10" height="28" rx="1" fill="url(#glassGlow)"/>
+    <rect x="192" y="115" width="10" height="28" rx="1" fill="url(#glassGlow)"/>
+    <rect x="205" y="115" width="10" height="28" rx="1" fill="url(#glassGlow)"/>
+
+    <!-- Mullions (thin dividers) -->
+    <line x1="189.5" y1="114" x2="189.5" y2="144" stroke="#1E2D3D" stroke-width="1.5"/>
+    <line x1="202.5" y1="114" x2="202.5" y2="144" stroke="#1E2D3D" stroke-width="1.5"/>
+
+    <!-- Gallery / walkway -->
+    <rect x="168" y="146" width="64" height="4" rx="1" fill="#1E2D3D"/>
+    <!-- Railing posts -->
+    <line x1="172" y1="143" x2="172" y2="146" stroke="#1E2D3D" stroke-width="1.5"/>
+    <line x1="180" y1="143" x2="180" y2="146" stroke="#1E2D3D" stroke-width="1.5"/>
+    <line x1="220" y1="143" x2="220" y2="146" stroke="#1E2D3D" stroke-width="1.5"/>
+    <line x1="228" y1="143" x2="228" y2="146" stroke="#1E2D3D" stroke-width="1.5"/>
+    <!-- Railing bar -->
+    <line x1="170" y1="143.5" x2="230" y2="143.5" stroke="#1E2D3D" stroke-width="1"/>
+
+    <!-- ===== UPPER TOWER ===== -->
+    <path d="M177 150 L223 150 L219 272 L181 272 Z" fill="url(#towerGrad)" stroke="#D0C9C0" stroke-width="0.5"/>
+    <!-- Red stripe 1 -->
+    <path d="M178.5 190 L221.5 190 L221 206 L179 206 Z" fill="#C0392B"/>
+    <!-- Window -->
+    <rect x="195" y="220" width="10" height="16" rx="5" fill="#2C3E50"/>
+    <rect x="197" y="222" width="6" height="12" rx="3" fill="#3D5A80" opacity="0.6"/>
+    <!-- Red stripe 2 -->
+    <path d="M180 248 L220 248 L219.5 264 L180.5 264 Z" fill="#C0392B"/>
+
+    <!-- Middle balcony -->
+    <rect x="174" y="272" width="52" height="4" rx="1" fill="#1E2D3D"/>
+
+    <!-- ===== LOWER TOWER ===== -->
+    <path d="M180 276 L220 276 L228 432 L172 432 Z" fill="url(#towerGrad)" stroke="#D0C9C0" stroke-width="0.5"/>
+    <!-- Red stripe 3 -->
+    <path d="M182 316 L218 316 L218.5 332 L181.5 332 Z" fill="#C0392B"/>
+    <!-- Window -->
+    <rect x="194" y="350" width="12" height="20" rx="6" fill="#2C3E50"/>
+    <rect x="196" y="352" width="8" height="16" rx="4" fill="#3D5A80" opacity="0.6"/>
+    <!-- Red stripe 4 -->
+    <path d="M184 382 L216 382 L217 398 L183 398 Z" fill="#C0392B"/>
+
+    <!-- Door -->
+    <path d="M190 432 L210 432 L210 408 Q200 398 190 408 Z" fill="#1E2D3D"/>
+    <circle cx="205" cy="420" r="2" fill="#D4A44C"/>
+
+    <!-- ===== BASE ===== -->
+    <path d="M158 432 L242 432 L252 450 L148 450 Z" fill="#5D6D7E"/>
+    <rect x="143" y="450" width="114" height="10" rx="2" fill="#4A5568"/>
+    <rect x="138" y="460" width="124" height="6" rx="2" fill="#3D4F5F"/>
+  </g>
+
+  <!-- ===== ROCKS ===== -->
+  <ellipse cx="200" cy="478" rx="95" ry="16" fill="#4A5568" opacity="0.5"/>
+  <ellipse cx="170" cy="482" rx="45" ry="10" fill="#3D4F5F" opacity="0.4"/>
+  <ellipse cx="235" cy="480" rx="38" ry="9" fill="#5D6D7E" opacity="0.4"/>
+  <ellipse cx="200" cy="486" rx="70" ry="8" fill="#2C3E50" opacity="0.2"/>
+
+  <!-- ===== WAVES ===== -->
+  <path d="M50 505 Q95 494 140 505 Q185 516 230 505 Q275 494 320 505 Q365 516 400 505" stroke="#7CADC4" stroke-width="2.5" fill="none" opacity="0.35" stroke-linecap="round"/>
+  <path d="M30 518 Q75 508 120 518 Q165 528 210 518 Q255 508 300 518 Q345 528 380 518" stroke="#7CADC4" stroke-width="2" fill="none" opacity="0.2" stroke-linecap="round"/>
+  <path d="M60 530 Q105 522 150 530 Q195 538 240 530 Q285 522 330 530 Q370 538 400 530" stroke="#7CADC4" stroke-width="1.5" fill="none" opacity="0.12" stroke-linecap="round"/>
+</svg>
