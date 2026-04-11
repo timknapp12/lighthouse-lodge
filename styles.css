@@ -228,7 +228,8 @@ a {
   width: 22px;
   height: 2px;
   background: var(--navy);
-  transition: transform 200ms var(--ease-out-cubic), opacity 150ms ease;
+  transition: transform 300ms ease, opacity 200ms ease;
+  transform-origin: center;
 }
 
 .nav-toggle span + span {
@@ -241,6 +242,7 @@ a {
 
 .nav-toggle.active span:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 
 .nav-toggle.active span:nth-child(3) {
@@ -258,16 +260,19 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 99;
     flex-direction: column;
     gap: 0;
     background: var(--warm-white);
     padding: 1rem 0;
-    transform: translateX(100%);
-    transition: transform 300ms var(--ease-out-quart);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms ease, visibility 250ms ease;
   }
 
   .nav-links.open {
-    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-links li {
@@ -288,7 +293,8 @@ a {
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .nav-links {
+    .nav-links,
+    .nav-toggle span {
       transition: none;
     }
   }
